@@ -1,0 +1,38 @@
+table {
+								border-collapse: collapse;
+								width: 100%;
+								max-width: 800px;
+								margin: 0 auto;
+								font-family: Arial, Helvetica, sans-serif;
+								font-size: 14px;
+								line-height: 1.6;
+								color: #333;
+							}
+							
+							th, td {
+								padding: 10px;
+								border: 1px solid #ccc;
+								text-align: left;
+								border-color: #4a7cf8;
+							}
+
+							th {
+								background-color: #7d31f7;
+								font-weight: bold;
+								color: #fff;
+							}
+
+							@media (max-width: 768px) {
+								table {
+									font-size: 12px;
+								}
+
+								th, td {
+									padding: 5px;
+									border-color: #4a7cf8;
+								}
+
+								th {
+									font-size: 14px;
+								}
+							}

@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ATPOS セルフオーダーシステム</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="セルフオーダーシステム,デジタルオーダー,オンライン注文,セルフサービス,モバイルオーダー,スマートフォン注文,タブレット注文,クイックオーダー,リモート注文,セルフペイ,ペイメントシステム,デジタルメニュー,フードオーダーシステム,オーダーテイクアウト,リアルタイム注文" name="keywords">
+    <meta content="ATPOS 0円か初められるセルフオーダー。飲食店やレストランで使用される自動注文システムです。お客様はタブレット端末やスマートフォンから、簡単にメニューを閲覧し、注文を自分で入力できます。当社のセルフオーダーシステムは、使いやすさと信頼性に優れ、効率的なオペレーションを実現します。" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <div class="container-fluid bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">ATPOS　Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 ">
+                <a href="index.html" class="navbar-brand p-0">
+                    <h1 class="m-0 text-primary-gradient">ATPOS</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">ホーム</a>
+                        <a href="index.html#about" class="nav-item nav-link">ATPOSとは</a>
+                        <a href="index.html#feature" class="nav-item nav-link">流れ</a>
+                        <a href="index.html#pricing" class="nav-item nav-link">料金</a>
+                        <a href="company.html" class="nav-item nav-link">会社情報</a>
+                        <a href="https://admin.atpos.net" class="nav-item nav-link">店舗ログイン</a>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">問い合わせ</a>
+                    <a href="tel:05068679509" class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">☎ 050-6867-9509</a>
+                </div>
+            </nav>
+
+            <div class="container-fluid hero-header">
+                <div class="container px-lg-5">
+                    <div class="row g-5">
+                        <div class="col-lg-6 text-center text-lg-start ">
+                            <h1 class="text-dark mb-4 animated slideInDown ">ATPOS クラウドPOSレジ</h1>
+                            <h5 class="text-dark pb-3 animated slideInDown"> 最強のコストパフォーマンスを実現するセルフオーダーシステム。他社のPOSレジ単体よりも低価格で、POSレジ・ハンディ・セルフオーダータブレットを一括導入！ </h5><p></p>
+                            <a href="contact.html" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft">問い合わせ</a>
+                            <a href="register.html" class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill animated slideInRight">登録フォームへ</a>
+                        </div>
+                        <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
+							<img class="img-fluid" src="img/about.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container-fluid " id="about">
+            <div class="container  px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="mb-4">セルフオーダー</h1>
+                        <p class="mb-4">必要ながらも面倒な業務に追われることはありませんか？<br/>
+						セルフオーダーシステムを採用することで、お客様が「注文したかったけどスタッフが来なかったので注文を諦めた」という機会を防ぐことができ、スタッフを待つことなくお客様のタイミングで注文することができます。それによりスタッフは注文業務に追われることなく、よりほかの業務やサービスに集中することができます。</p>
+                      
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid wow fadeInUp" data-wow-delay="0.5s" src="img/about.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Features Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="mb-5">セルフオーダーシステム</h1>
+					<h3 class="text-primary-gradient fw-medium">効率的な店舗運営、顧客満足度の向上を実現</h3>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-eye text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">お会計時などのスタッフの呼び出しはもちろん、おしぼりやドリンクなどの備品も端末から注文できます。</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-layer-group text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">テーブル番号やオーダー情報だけでなく、お客様の人数やラストオーダー、飲み放題の終了時間も表示できます。</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-edit text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">ドリンクとフードなどカテゴリごとに、複数のプリンターに振り分けができます。</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-shield-alt text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">食べ放題・飲み放題の残り時間を表示でき、ラストオーダーの確認もできます。</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-cloud text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">各メニューごとに写真やメニュー名、説明文なども登録できます。</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-mobile-alt text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">トッピングやアルコールの割方などのオプションも登録できます。</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Features End -->
+
+
+        <!-- Screenshot Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+                        <h2 class="text-primary-gradient fw-medium">QRコードを読み込むだけで注文できます</h2>
+                        <h1 class="mb-4">モバイルオーダー</h1>
+                        <p class="mb-4">QRコードを読み込むだけで、ご自身のスマホで簡単に注文することができます。特別なアプリのダウンロードは必要ありません。</p>
+                        <p><i class="fa fa-check text-primary-gradient me-3"></i>スタッフの呼び出し</p>
+                        <p><i class="fa fa-check text-primary-gradient me-3"></i>商品の画像を掲載</p>
+                        <p class="mb-4"><i class="fa fa-check text-primary-gradient me-3"></i>お客様の注文待ちのストレスがゼロに</p>
+                        <a href="" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3">すぐ問い合わせ</a>
+						<a href="tel:05068679509"><h3 style="margin-top: 20px;" class="text-primary-gradient fw-medium">☎　050-6867-9509<h3></a>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="owl-carousel screenshot-carousel">
+                            <img class="img-fluid" src="img/screenshot-1.png" alt="">
+                            <img class="img-fluid" src="img/screenshot-2.png" alt="">
+                            <img class="img-fluid" src="img/screenshot-3.png" alt="">
+                            <img class="img-fluid" src="img/screenshot-4.png" alt="">
+                            <img class="img-fluid" src="img/screenshot-5.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Screenshot End -->
+
+
+        <!-- Process Start -->
+        <div class="container-fluid py-5" id="feature">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="text-primary-gradient fw-medium">セルフオーダー導入の流れ</h1>
+                    <h5 class="mb-5">ご不明な点やご不安な点がございましたら、お気軽に導入相談にご連絡ください。お客様の状況やご要望やに合った最適のプランをご提供させていただきます。なお、ご契約頂後の利用開始時期は、プランによって異なる場合がございますので、予めご了承ください。</h5>
+                </div>
+                <div class="row gy-5 gx-4 justify-content-center">
+                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                                <i class="fa fa-cog fa-3x text-white"></i>
+                            </div>
+                            <h5 class="mt-4 mb-3">導入相談申込み</h5>
+                            <p class="mb-0">下のボタンから登録フォームに進んでいただき、導入相談を選択し送信してください。また、お電話でのお問い合わせも可能です。</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                                <i class="fa fa-address-card fa-3x text-white"></i>
+                            </div>
+                            <h5 class="mt-4 mb-3">ご契約</h5>
+                            <p class="mb-0">最適なプランをご提案させていただき、導入までのスケジュールもご案内させいていただきます。のちにプランをお選びいただいてご契約となります。</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                                <i class="fa fa-check fa-3x text-white"></i>
+                            </div>
+                            <h5 class="mt-4 mb-3">利用開始</h5>
+                            <p class="mb-0">ご契約後、１週間ほどでご利用になれます。</p>
+                        </div>
+                    </div>
+					<a style="width: 300px;" href="register.html" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-4">登録フォームへ</a>
+                </div>
+            </div>
+        </div>
+        <!-- Process Start -->
+
+
+        <!-- Pricing Start -->
+        <div class="container-fluid py-5" id="pricing">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">Choose Your Plan</h5>
+                    <h1 class="mb-5">プランを選択</h1>
+					</div>
+                <div class="tab-class text-center pricing wow fadeInUp" data-wow-delay="0.1s">
+                    <ul class="nav nav-pills d-inline-flex justify-content-center bg-primary-gradient rounded-pill mb-5">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="pill" href="#tab-1">月額</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="pill" href="#tab-2">年会費</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content text-start">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded border">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">フリープラン</h4>
+                                            <span>Free Plan</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">￥</small>0<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ 月</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>初期</span><i class="fa text-primary-gradient pt-1">なし</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>来店組客数</span><i class="fa text-primary-gradient pt-1">～50組/月</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>メニュー登録</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>スマホ注文</span><i class="fa text-primary-gradient pt-1">～1台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>QRオーダー</span><i class="fa text-primary-gradient pt-1">なし</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>テーブルオーダー</span><i class="fa text-primary-gradient pt-1">～0台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>キッチン・レジプリンタ接続</span><i class="fa text-primary-gradient pt-1">利用不可</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>問合せサポート</span><i class="fa text-primary-gradient pt-1">LINEメッセージ</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>支払い方法</span><i class="fa text-primary-gradient pt-1">-</i></div>
+                                            <a href="register.html" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded border">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">A プラン</h4>
+                                            <span>A Plan</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">￥</small>3.000<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ 月</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>初期</span><i class="fa text-primary-gradient pt-1">なし</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>来店組客数</span><i class="fa text-primary-gradient pt-1">～600組/月</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>メニュー登録</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>スマホ注文</span><i class="fa text-primary-gradient pt-1">～2台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>QRオーダー</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>テーブルオーダー</span><i class="fa text-primary-gradient pt-1">～0台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>キッチン・レジプリンタ接続</span><i class="fa text-primary-gradient pt-1">利用可能</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>問合せサポート</span><i class="fa text-primary-gradient pt-1">LINEメッセージ</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>支払い方法</span><i class="fa text-primary-gradient pt-1">-</i></div>
+                                            <a href="register.html" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded border">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">B プラン</h4>
+                                            <span>B Plan</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">￥</small>5.000<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ 月</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>初期</span><i class="fa text-primary-gradient pt-1">なし</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>来店組客数</span><i class="fa text-primary-gradient pt-1">～1000組/月</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>メニュー登録</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>スマホ注文</span><i class="fa text-primary-gradient pt-1">～3台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>QRオーダー</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>テーブルオーダー</span><i class="fa text-primary-gradient pt-1">～10台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>キッチン・レジプリンタ接続</span><i class="fa text-primary-gradient pt-1">利用可能</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>問合せサポート</span><i class="fa text-primary-gradient pt-1">LINE</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>支払い方法</span><i class="fa text-primary-gradient pt-1">-</i></div>
+                                            <a href="register.html" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="col-lg-4">
+                                    <div class="bg-light rounded border">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">C プラン</h4>
+                                            <span>C Plan</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">￥</small>7.000<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ 月</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>初期</span><i class="fa text-primary-gradient pt-1">なし</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>来店組客数</span><i class="fa text-primary-gradient pt-1">無制限</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>メニュー登録</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>スマホ注文</span><i class="fa text-primary-gradient pt-1">～3台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>QRオーダー</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>テーブルオーダー</span><i class="fa text-primary-gradient pt-1">～15台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>キッチン・レジプリンタ接続</span><i class="fa text-primary-gradient pt-1">利用可能</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>問合せサポート</span><i class="fa text-primary-gradient pt-1">LINEまた電話</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>支払い方法</span><i class="fa text-primary-gradient pt-1">-</i></div>
+                                            <a href="register.html" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="col-lg-4">
+                                    <div class="bg-light rounded border">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">プレミアムプラン</h4>
+                                            <span>Premium plan</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">￥</small>10.000<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ 月</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>初期</span><i class="fa text-primary-gradient pt-1">なし</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>来店組客数</span><i class="fa text-primary-gradient pt-1">無制限</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>メニュー登録</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>スマホ注文</span><i class="fa text-primary-gradient pt-1">無制限</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>QRオーダー</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>テーブルオーダー</span><i class="fa text-primary-gradient pt-1">無制限</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>キッチン・レジプリンタ接続</span><i class="fa text-primary-gradient pt-1">利用可能</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>問合せサポート</span><i class="fa text-primary-gradient pt-1">LINEまた電話</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>支払い方法</span><i class="fa text-primary-gradient pt-1">-</i></div>
+                                            <a href="register.html" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="col-lg-4">
+                                    <div class="bg-light rounded border">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">合わせプラン</h4>
+                                            <span>Matching plan</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;"></small>合わせ料金<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ 月</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>初期</span><i class="fa text-primary-gradient pt-1">なし</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>来店組客数</span><i class="fa text-primary-gradient pt-1">合わせ</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>メニュー登録</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>スマホ注文</span><i class="fa text-primary-gradient pt-1">合わせ</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>QRオーダー</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>テーブルオーダー</span><i class="fa text-primary-gradient pt-1">合わせ</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>キッチン・レジプリンタ接続</span><i class="fa text-primary-gradient pt-1">合わせ</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>問合せサポート</span><i class="fa text-primary-gradient pt-1">合わせ</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>支払い方法</span><i class="fa text-primary-gradient pt-1">-</i></div>
+                                            <a href="register.html" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">フリープラン</h4>
+                                            <span>Free Plan</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">￥</small>0<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ 年</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>初期</span><i class="fa text-primary-gradient pt-1">なし</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>来店組客数</span><i class="fa text-primary-gradient pt-1">～50組/月</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>メニュー登録</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>スマホ注文</span><i class="fa text-primary-gradient pt-1">～1台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>QRオーダー</span><i class="fa text-primary-gradient pt-1">なし</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>テーブルオーダー</span><i class="fa text-primary-gradient pt-1">～0台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>キッチン・レジプリンタ接続</span><i class="fa text-primary-gradient pt-1">利用不可</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>問合せサポート</span><i class="fa text-primary-gradient pt-1">LINEメッセージ</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>支払い方法</span><i class="fa text-primary-gradient pt-1">-</i></div>
+                                            <a href="register.html" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded border">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">A プラン</h4>
+                                            <span>A Plan</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">￥</small>30.000<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ 年</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>初期</span><i class="fa text-primary-gradient pt-1">なし</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>来店組客数</span><i class="fa text-primary-gradient pt-1">～600組/月</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>メニュー登録</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>スマホ注文</span><i class="fa text-primary-gradient pt-1">～2台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>QRオーダー</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>テーブルオーダー</span><i class="fa text-primary-gradient pt-1">～0台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>キッチン・レジプリンタ接続</span><i class="fa text-primary-gradient pt-1">利用可能</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>問合せサポート</span><i class="fa text-primary-gradient pt-1">LINE</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>支払い方法</span><i class="fa text-primary-gradient pt-1">-</i></div>
+                                            <a href="register.html" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">B プラン</h4>
+                                            <span>B Plan</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">￥</small>50.000<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ 年</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>初期</span><i class="fa text-primary-gradient pt-1">なし</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>来店組客数</span><i class="fa text-primary-gradient pt-1">～1000組/月</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>メニュー登録</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>スマホ注文</span><i class="fa text-primary-gradient pt-1">～3台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>QRオーダー</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>テーブルオーダー</span><i class="fa text-primary-gradient pt-1">～10台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>キッチン・レジプリンタ接続</span><i class="fa text-primary-gradient pt-1">利用可能</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>問合せサポート</span><i class="fa text-primary-gradient pt-1">LINE</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>支払い方法</span><i class="fa text-primary-gradient pt-1">-</i></div>
+                                            <a href="register.html" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">C プラン</h4>
+                                            <span>C Plan</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">￥</small>70.000<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ 年</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>初期</span><i class="fa text-primary-gradient pt-1">なし</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>来店組客数</span><i class="fa text-primary-gradient pt-1">無制限</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>メニュー登録</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>スマホ注文</span><i class="fa text-primary-gradient pt-1">～3台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>QRオーダー</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>テーブルオーダー</span><i class="fa text-primary-gradient pt-1">～15台</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>キッチン・レジプリンタ接続</span><i class="fa text-primary-gradient pt-1">利用可能</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>問合せサポート</span><i class="fa text-primary-gradient pt-1">LINEまた電話</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>支払い方法</span><i class="fa text-primary-gradient pt-1">-</i></div>
+                                            <a href="register.html" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">プレミアムプラン</h4>
+                                            <span>Premium plan</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">￥</small>100.000<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ 年</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>初期</span><i class="fa text-primary-gradient pt-1">なし</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>来店組客数</span><i class="fa text-primary-gradient pt-1">無制限</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>メニュー登録</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>スマホ注文</span><i class="fa text-primary-gradient pt-1">無制限</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>QRオーダー</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>テーブルオーダー</span><i class="fa text-primary-gradient pt-1">無制限</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>キッチン・レジプリンタ接続</span><i class="fa text-primary-gradient pt-1">利用可能</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>問合せサポート</span><i class="fa text-primary-gradient pt-1">LINEまた電話</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>支払い方法</span><i class="fa text-primary-gradient pt-1">-</i></div>
+                                            <a href="register.html" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">合わせプラン</h4>
+                                            <span>Matching plan</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">￥</small>合わせ料金<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ 年</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>初期</span><i class="fa text-primary-gradient pt-1">なし</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>来店組客数</span><i class="fa text-primary-gradient pt-1">合わせ</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>メニュー登録</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>スマホ注文</span><i class="fa text-primary-gradient pt-1">合わせ</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>QRオーダー</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>テーブルオーダー</span><i class="fa text-primary-gradient pt-1">合わせ</i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>キッチン・レジプリンタ接続</span><i class="fa text-primary-gradient pt-1">合わせ</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>問合せサポート</span><i class="fa text-primary-gradient pt-1">合わせ</i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>支払い方法</span><i class="fa text-primary-gradient pt-1">-</i></div>
+                                            <a href="register.html" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pricing End -->
+
+
+        <!-- Download Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <img class="img-fluid wow fadeInUp" data-wow-delay="0.1s" src="img/about.png">
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <h5 class="text-primary-gradient fw-medium">Download</h5>
+                        <h1 class="mb-4">アプリダウンロード</h1>
+                        <p class="mb-4">アカウントを作成するには、まずお問い合わせください</p>
+                        <div class="row g-4">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                <a class="d-flex bg-primary-gradient rounded py-3 px-4">
+                                    <i class="fab fa-apple fa-3x text-white flex-shrink-0"></i>
+                                    <div class="ms-3">
+                                        <p class="text-white mb-0">準備中</p>
+                                        <h5 class="text-white mb-0">App Store</h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                                <a href="https://www.amazon.co.jp/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BEAT-ATPOS-%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89POS%E3%83%AC%E3%82%B8/dp/B0BVK3TMW2/ref=sr_1_1?fbclid=IwAR2vQygAKYOAe6gWhBQ3cRo7JA-prHeYEHCIsjWCeZUTRqKSn9fMoPSWU44&qid=1682496485&s=mobile-apps&search-type=ss&sr=1-1" class="d-flex bg-secondary-gradient rounded py-3 px-4">
+                                    <i class="fab fa-android fa-3x text-white flex-shrink-0"></i>
+                                    <div class="ms-3">
+                                        <p class="text-white mb-0">Available On</p>
+                                        <h5 class="text-white mb-0">Amazon Store</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Download End -->
+
+        <!-- Testimonial Start -->
+        <div class="container-fluid py-5" id="review">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">What Say Our Clients</h5>
+                    <h1 class="mb-5">お客様の声</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-1.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">焼肉屋の店長</h5>
+                                <p class="mb-1">小岩駅近くにある店</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">便利で手軽に注文できるので、お客様からも好評です。特に、外国人観光客からも好評を得ています。</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-2.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">韓国料理屋の店長</h5>
+                                <p class="mb-1">本八幡駅近くにある店</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">以前よりも注文がスムーズになり、スタッフの負担も減りました。また、オーダーミスが減ったのも良い点です。</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-3.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">とりやき屋の店長</h5>
+                                <p class="mb-1">亀有駅近くにある店</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">タブレットで注文ができるため、紙のメニューと比べて見た目もスマートになり、おしゃれな雰囲気を演出できます。</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-4.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">ベトナム料理屋の店長</h5>
+                                <p class="mb-1">西葛西駅近くにある店</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">お客様が自分で注文を入力するため、スタッフとのやり取りが減る分、接触リスクも減りました。</p>
+                    </div>
+					<div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-5.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">フォー屋の店長</h5>
+                                <p class="mb-1">宮原駅近くにある店</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">利用開始後、アプリの使い方に不安を感じるお客様がいらっしゃいますが、スタッフが丁寧にサポートすることで問題なく注文ができるようになりました。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid text-dark footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">株式会社AT</h4>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>〒132-0035 東京都江戸川区平井３丁目１２－３マヤマンション３０３号</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>050-6867-9509</p>
+                        <p><i class="fa fa-envelope me-3"></i>contact.atpos@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/atpos.net"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-dark mb-4">メニュー</h4>
+                        <a class="btn btn-link" href="index.html">ホーム</a>
+                        <a class="btn btn-link" href="index.html#about">ATPOSとは</a>
+                        <a class="btn btn-link" href="index.html#feature">流れ</a>
+                        <a class="btn btn-link" href="price.html">料金</a>
+                        <a class="btn btn-link" href="company.html">会社情報</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-dark">
+                        <h4 class="text-dark mb-4">連携リンク</h4>
+                        <a class="btn btn-link" href="ｈｔｔｐｓ：//admin.atpos.net">店舗管理サイト</a>
+                        <a class="btn btn-link" href="">登録フォーム</a>
+                        <a class="btn btn-link" href="">マニュアル</a>
+                        <a class="btn btn-link" href="terms.html">利用規約</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-dark mb-4">Get Email</h4>
+                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-1 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary-gradient fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom text-dark" href="#"><b>ATPOS</b></a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom text-dark" href="https://at-jsc.jp"><b>AT-JSC</b></a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="index.html">ホーム</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="Q&A.html">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PQL88Q4CFC"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-PQL88Q4CFC');
+	</script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
