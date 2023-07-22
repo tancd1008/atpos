@@ -18,9 +18,9 @@
     <!--Emailjs-->
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
-        // Khởi tạo EmailJS với thông tin User ID của bạn
-        emailjs.init("utX0wt3Xh-XbZnu3v");
-      </script>
+      // Khởi tạo EmailJS với thông tin User ID của bạn
+      emailjs.init("utX0wt3Xh-XbZnu3v");
+    </script>
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -45,7 +45,32 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-
+    <!--Link toastr-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+    <style>
+        /* Định dạng vị trí của thông báo Toastr */
+        #toast-container {
+          position: fixed;
+          z-index: 9999;
+          top: 10%;
+          left: 40%;
+          /* transform: translate(-50%, -50%); */
+        }
+      
+        /* Định dạng nút đóng thông báo */
+        .toast-close-button {
+          color: #fff;
+          opacity: 1;
+        }
+      
+        /* Định dạng cho Toastr có hiệu ứng phổ biến */
+        .toast {
+          opacity: 1;
+        }
+      </style>
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/style1.css" rel="stylesheet" />
@@ -111,13 +136,17 @@
       <!-- Contact Start -->
       <div class="container-xxl py-5" id="contact">
         <div class="container py-5 px-lg-5">
-          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h5 class="text-primary-gradient fw-medium">Contact Us</h5>
-            <h1 class="mb-5">問い合わせ</h1>
+          <div class="wow fadeInUp" data-wow-delay="0.1s">
+            <h5 class="text-primary-gradient fw-medium text-center">
+              Contact Us
+            </h5>
+            <h1 class="mb-5 text-center">問い合わせ</h1>
             <div class="border-1">
-              <form class="border-1" id="sendMail" onsubmit="sendEmail(); reset(); return false" method="post">
+              <form class="border-1" id="sendMail" method="post">
                 <div class="mb-3">
-                  <label for="name" class="form-label">Full Name</label>
+                  <label for="name" class="form-label text-dark fw-bold"
+                    >Full Name</label
+                  >
                   <input
                     type="text"
                     class="form-control"
@@ -127,7 +156,9 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email address</label>
+                  <label for="email" class="form-label text-dark fw-bold"
+                    >Email address</label
+                  >
                   <input
                     type="email"
                     class="form-control"
@@ -137,7 +168,9 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="phone" class="form-label">Phone</label>
+                  <label for="phone" class="form-label text-dark fw-bold"
+                    >Phone</label
+                  >
                   <input
                     type="text"
                     class="form-control"
@@ -147,16 +180,24 @@
                   />
                 </div>
                 <div class="mb-3">
-                    <label for="massage" class="form-label">Message</label>
-                    <input
-                      type="massage"
-                      class="form-control"
-                      id="massage"
-                      placeholder="Enter your message"
-                      required
-                    />
-                  </div>
-                <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+                  <label for="massage" class="form-label text-dark fw-bold"
+                    >Message</label
+                  >
+                  <input
+                    type="massage"
+                    class="form-control"
+                    id="massage"
+                    placeholder="Enter your message"
+                    required
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary-gradient text-white"
+                  value="submit"
+                >
+                  Submit
+                </button>
               </form>
             </div>
           </div>
@@ -274,33 +315,44 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <!-- Send Email-->
-   
+
     <script type="text/javascript">
-        document.getElementById("sendMail").onsubmit = function(event) {
-          event.preventDefault(); // Ngăn form tự động gửi
-          // Lấy thông tin từ form
-          const to_name = document.getElementById("name").value;  
-          const to_email = document.getElementById("email").value;
-          const to_message = document.getElementById("massage").value;
-          const to_phone = document.getElementById("phone").value;
+      function reset() {
+        document.getElementById("sendMail").reset();
+      }
+      document.getElementById("sendMail").onsubmit = function (event) {
+        event.preventDefault(); // Ngăn form tự động gửi
+        // Lấy thông tin từ form
+        const to_name = document.getElementById("name").value;
+        const to_email = document.getElementById("email").value;
+        const to_message = document.getElementById("massage").value;
+        const to_phone = document.getElementById("phone").value;
         //   console.log(message)
-      
-          // Gửi email bằng EmailJS
-          emailjs.send("service_vem9bud", "template_ycpwcx8", {
+
+        // Gửi email bằng EmailJS
+        emailjs
+          .send("service_vem9bud", "template_ycpwcx8", {
             name: to_name,
             email: to_email,
             message: to_message,
-            phone: to_phone
-          }).then(function(response) {
-            console.log("Email sent successfully!", response);
-          }, function(error) {
-            console.error("Email failed to send!", error);
-          });
-        };
-      </script>
+            phone: to_phone,
+          })
+          .then(
+            function (response) {
+              console.log("Email sent successfully!", response);
+              toastr.success("Chúng tôi sẽ liên hệ lại với bạn!", "Success");
+              reset();
+            },
+            function (error) {
+              console.error("Email failed to send!", error);
+            }
+          );
+      };
+    </script>
   </body>
 </html>
