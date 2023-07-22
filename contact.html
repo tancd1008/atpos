@@ -175,7 +175,31 @@
                     type="text"
                     class="form-control"
                     id="phone"
-                    placeholder="Enter the phpne"
+                    placeholder="Enter the phone"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="addressRestaurant" class="form-label text-dark fw-bold"
+                    >Address Restaurant</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="addressRestaurant"
+                    placeholder="Enter your address restaurant"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="trainStation" class="form-label text-dark fw-bold"
+                    >Nearest train station</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="trainStation"
+                    placeholder="Enter your nearest train station "
                     required
                   />
                 </div>
@@ -332,8 +356,8 @@
         const to_email = document.getElementById("email").value;
         const to_message = document.getElementById("massage").value;
         const to_phone = document.getElementById("phone").value;
-        //   console.log(message)
-
+        const to_address_restaurant = document.getElementById("addressRestaurant").value;
+        const to_tranin_station = document.getElementById("trainStation").value;
         // Gửi email bằng EmailJS
         emailjs
           .send("service_vem9bud", "template_ycpwcx8", {
@@ -341,11 +365,13 @@
             email: to_email,
             message: to_message,
             phone: to_phone,
+            addressRestaurant: to_address_restaurant,
+            traninStation: to_tranin_station,
           })
           .then(
             function (response) {
               console.log("Email sent successfully!", response);
-              toastr.success("Chúng tôi sẽ liên hệ lại với bạn!", "Success");
+              toastr.success("We have received your feedback!", "Notification");
               reset();
             },
             function (error) {
