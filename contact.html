@@ -51,26 +51,26 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
     />
     <style>
-        /* Định dạng vị trí của thông báo Toastr */
-        #toast-container {
-          position: fixed;
-          z-index: 9999;
-          top: 10%;
-          left: 40%;
-          /* transform: translate(-50%, -50%); */
-        }
-      
-        /* Định dạng nút đóng thông báo */
-        .toast-close-button {
-          color: #fff;
-          opacity: 1;
-        }
-      
-        /* Định dạng cho Toastr có hiệu ứng phổ biến */
-        .toast {
-          opacity: 1;
-        }
-      </style>
+      /* Định dạng vị trí của thông báo Toastr */
+      #toast-container {
+        position: fixed;
+        z-index: 9999;
+        top: 10%;
+        left: 40%;
+        /* transform: translate(-50%, -50%); */
+      }
+
+      /* Định dạng nút đóng thông báo */
+      .toast-close-button {
+        color: #fff;
+        opacity: 1;
+      }
+
+      /* Định dạng cho Toastr có hiệu ứng phổ biến */
+      .toast {
+        opacity: 1;
+      }
+    </style>
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/style1.css" rel="stylesheet" />
@@ -135,111 +135,181 @@
 
       <!-- Contact Start -->
       <section class="ftco-section">
-		<div class="container-contact">
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">問い合わせ</h2>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-md-10">
-					<div class="wrapper">
-						<div class="row no-gutters">
-							<div class="col-md-6">
-								<div class="contact-wrap w-100 p-lg-5 p-4">
-									<h3 class="mb-4">私達にメッセージを送ります</h3>
-									<div id="form-message-warning" class="mb-4"></div> 
-				      		
-									<form method="POST" id="contactForm" name="contactForm" class="contactForm">
-										<div class="row">
-											<div class="col-md-12">
-												<div class="form-group">
-													<input type="text" class="form-control-contact" name="name" id="name" placeholder="お客様の名前" required>
-												</div>
-											</div>
-											<div class="col-md-12"> 
-												<div class="form-group">
-													<input type="email" class="form-control-contact" name="email" id="email" placeholder="メール" required>
-                                                   
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group">
-													<input type="text" class="form-control-contact" name="phone" id="phone" placeholder="お電話番号" required>
-												</div>
-											</div>
-                                            <div class="col-md-12">
-												<div class="form-group">
-													<input type="text" class="form-control-contact" name="addressRestaurant" id="addressRestaurant" placeholder="お店の住所" required>
-												</div>
-											</div>
-                                            <div class="col-md-12">
-												<div class="form-group">
-													<input type="text" class="form-control-contact" name="trainStation" id="trainStation" placeholder="お店の一番近くの駅
-                                                    " required>
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group">
-													<textarea name="message" class="form-control-contact" id="message" cols="30" rows="6" placeholder="他の質問かお希望がありますか？"></textarea>
-												</div>
-											</div>
-                                            
-											<div class="col-md-12">
-												<div class="form-group">
-													<input type="submit" value="メッセージを送ります" class="btn btn-primary">
-													<div class="submitting"></div>
-												</div>
-											</div>
-										</div>
-									</form>
-								</div>
-							</div>
-							<div class="col-md-6 d-flex align-items-stretch">
-								<div class="info-wrap w-100 p-lg-5 p-4 img">
-									<h3>問い合わせ</h3>
-									<p class="mb-4">ご提案やチャットだけでもお待ちしております</p>
-				        	<div class="dbox w-100 d-flex align-items-start">
-				        		<div class="icon d-flex align-items-center justify-content-center">
-				        			<span class="fa fa-map-marker"></span>
-				        		</div>
-				        		<div class="text pl-3">
-					            <p><span>Address:</span> 〒132-0035
-                                    東京都江戸川区平井３丁目１２－３マヤマンション３０３号</p>
-					          </div>
-				          </div>
-				        	<div class="dbox w-100 d-flex align-items-center">
-				        		<div class="icon d-flex align-items-center justify-content-center">
-				        			<span class="fa fa-phone"></span>
-				        		</div>
-				        		<div class="text pl-3">
-					            <p><span>Phone:</span> <a href="tel://1234567920">050-6867-9509</a></p>
-					          </div>
-				          </div>
-				        	<div class="dbox w-100 d-flex align-items-center">
-				        		<div class="icon d-flex align-items-center justify-content-center">
-				        			<span class="fa fa-paper-plane"></span>
-				        		</div>
-				        		<div class="text pl-3">
-					            <p><span>Email:</span> <a href="mailto:info@yoursite.com">contact.atpos@gmail.com</a></p>
-					          </div>
-				          </div>
-				        	<div class="dbox w-100 d-flex align-items-center">
-				        		<div class="icon d-flex align-items-center justify-content-center">
-				        			<span class="fa fa-globe"></span>
-				        		</div>
-				        		<div class="text pl-3">
-					            <p><span>Website</span> <a href="#">atpos.net</a></p>
-					          </div>
-				          </div>
-			          </div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+        <div class="container-contact">
+          <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+              <h2 class="heading-section">問い合わせ</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-10">
+              <div class="wrapper">
+                <div class="row no-gutters">
+                  <div class="col-md-6">
+                    <div class="contact-wrap w-100 p-lg-5 p-4">
+                      <h3 class="mb-4">私達にメッセージを送ります</h3>
+                      <div id="form-message-warning" class="mb-4"></div>
+
+                      <form
+                        method="POST"
+                        id="contactForm"
+                        name="contactForm"
+                        class="contactForm"
+                      >
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control-contact"
+                                name="name"
+                                id="name"
+                                placeholder="お客様の名前"
+                                required
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <input
+                                type="email"
+                                class="form-control-contact"
+                                name="email"
+                                id="email"
+                                placeholder="メール"
+                                required
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control-contact"
+                                name="phone"
+                                id="phone"
+                                placeholder="お電話番号"
+                                required
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control-contact"
+                                name="addressRestaurant"
+                                id="addressRestaurant"
+                                placeholder="お店の住所"
+                                required
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control-contact"
+                                name="trainStation"
+                                id="trainStation"
+                                placeholder="お店の一番近くの駅
+                                                    "
+                                required
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <textarea
+                                name="message"
+                                class="form-control-contact"
+                                id="message"
+                                cols="30"
+                                rows="6"
+                                placeholder="他の質問かお希望がありますか？"
+                              ></textarea>
+                            </div>
+                          </div>
+
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <input
+                                type="submit"
+                                value="メッセージを送ります"
+                                class="btn btn-primary"
+                              />
+                              <div class="submitting"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="info-wrap w-100 p-lg-5 p-4 img">
+                      <h3>問い合わせ</h3>
+                      <p class="mb-4">
+                        ご提案やチャットだけでもお待ちしております
+                      </p>
+                      <div class="dbox w-100 d-flex align-items-start">
+                        <div
+                          class="icon d-flex align-items-center justify-content-center"
+                        >
+                          <span class="fa fa-map-marker"></span>
+                        </div>
+                        <div class="text pl-3">
+                          <p>
+                            <span>Address:</span> 〒132-0035
+                            東京都江戸川区平井３丁目１２－３マヤマンション３０３号
+                          </p>
+                        </div>
+                      </div>
+                      <div class="dbox w-100 d-flex align-items-center">
+                        <div
+                          class="icon d-flex align-items-center justify-content-center"
+                        >
+                          <span class="fa fa-phone"></span>
+                        </div>
+                        <div class="text pl-3">
+                          <p>
+                            <span>Phone:</span>
+                            <a href="tel://1234567920">050-6867-9509</a>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="dbox w-100 d-flex align-items-center">
+                        <div
+                          class="icon d-flex align-items-center justify-content-center"
+                        >
+                          <span class="fa fa-paper-plane"></span>
+                        </div>
+                        <div class="text pl-3">
+                          <p>
+                            <span>Email:</span>
+                            <a href="mailto:info@yoursite.com"
+                              >contact.atpos@gmail.com</a
+                            >
+                          </p>
+                        </div>
+                      </div>
+                      <div class="dbox w-100 d-flex align-items-center">
+                        <div
+                          class="icon d-flex align-items-center justify-content-center"
+                        >
+                          <span class="fa fa-globe"></span>
+                        </div>
+                        <div class="text pl-3">
+                          <p><span>Website</span> <a href="#">atpos.net</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Contact End -->
 
       <!-- Footer Start -->
@@ -324,7 +394,7 @@
                   ><b>AT-JSC</b></a
                 >
               </div>
-              <div class=" text-dark col-md-6 text-center text-md-end">
+              <div class="text-dark col-md-6 text-center text-md-end">
                 <div class="footer-menu">
                   <a class="text-dark" href="index.html">ホーム</a>
                   <a class="text-dark" href="">Cookies</a>
@@ -339,7 +409,9 @@
       <!-- Footer End -->
 
       <!-- Back to Top -->
-      <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+      <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"
+        ><i class="bi bi-arrow-up text-white"></i
+      ></a>
     </div>
 
     <!-- JavaScript Libraries -->
@@ -357,7 +429,6 @@
     <!-- Send Email-->
 
     <script type="text/javascript">
-    
       function reset() {
         document.getElementById("contactForm").reset();
       }
@@ -368,9 +439,10 @@
         const to_email = document.getElementById("email").value;
         const to_message = document.getElementById("message").value;
         const to_phone = document.getElementById("phone").value;
-        const to_address_restaurant = document.getElementById("addressRestaurant").value;
+        const to_address_restaurant =
+          document.getElementById("addressRestaurant").value;
         const to_tranin_station = document.getElementById("trainStation").value;
-        
+
         emailjs
           .send("service_vem9bud", "template_ycpwcx8", {
             name: to_name,

@@ -1,209 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>ATPOS　会社情報 - Conpany </title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="セルフオーダーシステム,デジタルオーダー,オンライン注文,セルフサービス,モバイルオーダー,スマートフォン注文,タブレット注文,クイックオーダー,リモート注文,セルフペイ,ペイメントシステム,デジタルメニュー,フードオーダーシステム,オーダーテイクアウト,リアルタイム注文" name="keywords">
-    <meta content="ATPOS 0円か初められるセルフオーダー。飲食店やレストランで使用される自動注文システムです。お客様はタブレット端末やスマートフォンから、簡単にメニューを閲覧し、注文を自分で入力できます。当社のセルフオーダーシステムは、使いやすさと信頼性に優れ、効率的なオペレーションを実現します。" name="description">
+  <head>
+    <meta charset="utf-8" />
+    <title>ATPOS　会社情報 - Conpany</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="セルフオーダーシステム,デジタルオーダー,オンライン注文,セルフサービス,モバイルオーダー,スマートフォン注文,タブレット注文,クイックオーダー,リモート注文,セルフペイ,ペイメントシステム,デジタルメニュー,フードオーダーシステム,オーダーテイクアウト,リアルタイム注文"
+      name="keywords"
+    />
+    <meta
+      content="ATPOS 0円か初められるセルフオーダー。飲食店やレストランで使用される自動注文システムです。お客様はタブレット端末やスマートフォンから、簡単にメニューを閲覧し、注文を自分で入力できます。当社のセルフオーダーシステムは、使いやすさと信頼性に優れ、効率的なオペレーションを実現します。"
+      name="description"
+    />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style1.css" rel="stylesheet">
-</head>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style1.css" rel="stylesheet" />
+  </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
     <div class="container-fuild bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-grow text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
         </div>
-        <!-- Spinner End -->
+      </div>
+      <!-- Spinner End -->
 
+      <!-- Navbar & Hero Start -->
+      <div class="container-fluid position-relative p-0" id="home">
+        <nav
+          class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+        >
+          <a href="index.html" class="navbar-brand p-0">
+            <h1 class="m-0 text-primary-gradient">ATPOS</h1>
+            <!-- <img src="img/logo.png" alt="Logo"> -->
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+              <a href="index.html" class="nav-item nav-link">ホーム</a>
+              <a href="company.html" class="nav-item nav-link active"
+                >会社情報</a
+              >
+              <a href="https://admin.atpos.net" class="nav-item nav-link"
+                >店舗ログイン</a
+              >
+            </div>
+            <a
+              href="contact.html"
+              class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block"
+              >問い合わせ</a
+            >
+            <a
+              href="tel:05068679509"
+              class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block"
+              >☎ 050-6867-9509</a
+            >
+          </div>
+        </nav>
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0" id="home">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
-                    <h1 class="m-0 text-primary-gradient">ATPOS</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
+        <div class="container-fluid hero-header">
+          <div class="container px-lg-5">
+            <div class="row g-5">
+              <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="text-dark mb-4 animated slideInDown">
+                  ATPOSはAT-JSCが開発・運営アプリシステム
+                </h1>
+                <p class="text-dark pb-3 animated slideInDown">
+                  ATPOSは、AT-JSCが自社で開発・運営している、日本のレストランを対象としたサービスです。AT-JSCは、日本で大手企業のパートナーとして働いた経験を持つ経験豊富な開発チームを擁する、若く情熱的なIT企業です。AT-JSCは、お客様と共に成長し、ITソリューションを提供することで、より大きな発展を目指しています。
+                </p>
+                <a
+                  href="tel:05068679509"
+                  class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft"
+                  >電話で問い合わせ</a
+                >
+                <a
+                  href="register.html"
+                  class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill animated slideInRight"
+                  >登録フォームへ進み</a
+                >
+              </div>
+              <div
+                class="col-lg-6 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
+                data-wow-delay="0.3s"
+              >
+                <img class="img-fluid" src="img/about.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar & Hero End -->
+
+      <!-- About Start -->
+      <div class="container-xxl py-5" id="about">
+        <div class="container py-5 px-lg-5">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+              <h1 class="mb-4">株式会社AT</h1>
+              <table>
+                <thead>
+                  <tr>
+                    <th>会社名</th>
+                    <th>株式会社AT</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fw-bolder">所在地</td>
+                    <td>
+                      〒132-0035 東京都江戸川区平井3丁目12-3<br />
+                      マヤマンション303号
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bolder">TEL</td>
+                    <td>050-6867-9509</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bolder">代表者</td>
+                    <td>LE　ANH　TAI</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bolder">設立</td>
+                    <td>2021年11月17日</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bolder">資本金</td>
+                    <td>500万円</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bolder">事業内容</td>
+                    <td>
+                      ソフトウェア開発・販売及び付属設備販売<br />
+                      電話・コンピューター修理・販売<br />
+                      日用雑貨の企画及び製造及び輪出入販売<br />
+                      ネット通販事業<br />
+                      貨物輸送事業<br />
+                      飲食店の経営<br />
+                      一般旅行業<br />
+                      前各号に付帯関連する一切の事業
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="align-content: center" class="col-lg-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.886968128945!2d139.83976131555147!3d35.7043990363079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601888bb07f4ce81%3A0x884efa33ccdcae7d!2z44CSMTMyLTAwMzUgVG9reW8sIEVkb2dhd2EgQ2l0eSwgSGlyYWksIDMtY2jFjW1l4oiSMTLiiJIzIOODnuODpOODnuODs-OCt-ODp-ODsw!5e0!3m2!1svi!2sjp!4v1678465110868!5m2!1svi!2sjp"
+                width="100%"
+                height="500px"
+                style="border: 0; margin: 20px; padding-top: 45px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- About End -->
+
+      <!-- Footer Start -->
+      <div class="container-fluid footer wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5 px-lg-5">
+          <div class="row g-5">
+            <div class="col-md-6 col-lg-3">
+              <h4 class="text-dark mb-4">株式会社AT</h4>
+              <p>
+                <i class="fa fa-map-marker-alt me-3"></i>〒132-0035
+                東京都江戸川区平井３丁目１２－３マヤマンション３０３号
+              </p>
+              <p><i class="fa fa-phone-alt me-3"></i>050-6867-9509</p>
+              <p><i class="fa fa-envelope me-3"></i>contact.atpos@gmail.com</p>
+              <div class="d-flex pt-2">
+                <a class="btn btn-outline-light btn-social" href="#"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light btn-social"
+                  href="https://www.facebook.com/atpos.net"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href="#"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h4 class="text-dark mb-4">メニュー</h4>
+              <a class="btn btn-link" href="index.html">ホーム</a>
+              <a class="btn btn-link" href="index.html#about">ATPOSとは</a>
+              <a class="btn btn-link" href="index.html#feature">流れ</a>
+              <a class="btn btn-link" href="price.html">値段</a>
+              <a class="btn btn-link" href="company.html">会社情報</a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h4 class="text-dark mb-4">連携リンク</h4>
+              <a class="btn btn-link" href="ｈｔｔｐｓ：//admin.atpos.net"
+                >店舗管理サイト</a
+              >
+              <a class="btn btn-link" href="">登録フォーム</a>
+              <a class="btn btn-link" href="">マニュアル</a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h4 class="text-dark mb-4">Newsletter</h4>
+              <p>
+                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.
+                Curabitur facilisis ornare velit non vulpu
+              </p>
+              <div class="position-relative w-100 mt-3">
+                <input
+                  class="form-control border-1 rounded-pill w-100 ps-4 pe-5"
+                  type="text"
+                  placeholder="Your Email"
+                  style="height: 48px"
+                />
+                <button
+                  type="button"
+                  class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"
+                >
+                  <i class="fa fa-paper-plane text-primary-gradient fs-4"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">ホーム</a>
-                        <a href="company.html" class="nav-item nav-link active">会社情報</a>
-                        <a href="https://admin.atpos.net" class="nav-item nav-link">店舗ログイン</a>
-                    </div>
-                    <a href="contact.html" class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">問い合わせ</a>
-                    <a href="tel:05068679509" class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">☎ 050-6867-9509</a>
-                </div>
-            </nav>
-
-            <div class="container-fluid hero-header">
-                <div class="container px-lg-5">
-                    <div class="row g-5">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="text-dark mb-4 animated slideInDown">ATPOSはAT-JSCが開発・運営アプリシステム</h1>
-                            <p class="text-dark pb-3 animated slideInDown">ATPOSは、AT-JSCが自社で開発・運営している、日本のレストランを対象としたサービスです。AT-JSCは、日本で大手企業のパートナーとして働いた経験を持つ経験豊富な開発チームを擁する、若く情熱的なIT企業です。AT-JSCは、お客様と共に成長し、ITソリューションを提供することで、より大きな発展を目指しています。</p>
-                            <a href="tel:05068679509" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft">電話で問い合わせ</a>
-                            <a href="register.html" class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill animated slideInRight">登録フォームへ進み</a>
-                        </div>
-                        <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
-							<img class="img-fluid" src="img/about.png" alt="">
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- Navbar & Hero End -->
+        <div class="container px-lg-5">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a class="border-bottom" href="#">ATPOS</a>, All Right
+                Reserved.
 
-		<!-- About Start -->
-        <div class="container-xxl py-5" id="about">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="mb-4">株式会社AT</h1>
-						<table>
-							<thead>
-								<tr>
-									<th>会社名</th>
-									<th>株式会社AT</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="fw-bolder">所在地</td>
-									<td>〒132-0035 東京都江戸川区平井3丁目12-3<br/>
-										マヤマンション303号</td>
-								</tr>
-								<tr>
-									<td class="fw-bolder">TEL</td>
-									<td>050-6867-9509</td>
-								</tr>
-								<tr>
-									<td class="fw-bolder">代表者</td>
-									<td>LE　ANH　TAI</td>
-								</tr>
-								<tr>
-									<td class="fw-bolder">設立</td>
-									<td>2021年11月17日</td>
-								</tr>
-								<tr>
-									<td class="fw-bolder">資本金</td>
-									<td>500万円</td>
-								</tr>
-								<tr>
-									<td class="fw-bolder">事業内容</td>
-									<td>ソフトウェア開発・販売及び付属設備販売<br/>
-										電話・コンピューター修理・販売<br/>
-										日用雑貨の企画及び製造及び輪出入販売<br/>
-										ネット通販事業<br/>
-										貨物輸送事業<br/>
-										飲食店の経営<br/>
-										一般旅行業<br/>
-										前各号に付帯関連する一切の事業	</td>
-								</tr>
-							</tbody>
-						</table>
-                    </div>
-                    <div style="align-content:center;" class="col-lg-6">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.886968128945!2d139.83976131555147!3d35.7043990363079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601888bb07f4ce81%3A0x884efa33ccdcae7d!2z44CSMTMyLTAwMzUgVG9reW8sIEVkb2dhd2EgQ2l0eSwgSGlyYWksIDMtY2jFjW1l4oiSMTLiiJIzIOODnuODpOODnuODs-OCt-ODp-ODsw!5e0!3m2!1svi!2sjp!4v1678465110868!5m2!1svi!2sjp" width="100%" height="500px" style="border:0;margin: 20px; padding-top: 45px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                Designed By
+                <a class="border-bottom" href="https://at-jsc.jp">AT-JSC</a>
+              </div>
+              <div class="col-md-6 text-center text-md-end">
+                <div class="footer-menu">
+                  <a href="index.html">ホーム</a>
+                  <a href="">Cookies</a>
+                  <a href="">Help</a>
+                  <a href="Q&A.html">FQAs</a>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- About End -->
+      </div>
+      <!-- Footer End -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid  footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <h4 class="text-dark mb-4">株式会社AT</h4>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>〒132-0035 東京都江戸川区平井３丁目１２－３マヤマンション３０３号</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>050-6867-9509</p>
-                        <p><i class="fa fa-envelope me-3"></i>contact.atpos@gmail.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/atpos.net"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <h4 class="text-dark mb-4">メニュー</h4>
-                        <a class="btn btn-link" href="index.html">ホーム</a>
-                        <a class="btn btn-link" href="index.html#about">ATPOSとは</a>
-                        <a class="btn btn-link" href="index.html#feature">流れ</a>
-                        <a class="btn btn-link" href="price.html">値段</a>
-                        <a class="btn btn-link" href="company.html">会社情報</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <h4 class="text-dark mb-4">連携リンク</h4>
-                        <a class="btn btn-link" href="ｈｔｔｐｓ：//admin.atpos.net">店舗管理サイト</a>
-                        <a class="btn btn-link" href="">登録フォーム</a>
-                        <a class="btn btn-link" href="">マニュアル</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <h4 class="text-dark mb-4">Newsletter</h4>
-                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-1 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary-gradient fs-4"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">ATPOS</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://at-jsc.jp">AT-JSC</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="index.html">ホーム</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="Q&A.html">FQAs</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"
+        ><i class="bi bi-arrow-up text-white"></i
+      ></a>
     </div>
 
     <!-- JavaScript Libraries -->
@@ -217,6 +312,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
