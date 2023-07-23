@@ -99,7 +99,7 @@
           class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top shadow-sm"
         >
           <a href="index.html" class="navbar-brand p-0">
-            <h1 class="m-0 text-primary-gradient">ATPOS </h1>
+            <h1 class="m-0 text-primary-gradient">ATPOS</h1>
             <!-- <img src="img/logo.png" alt="Logo"> -->
           </a>
           <button
@@ -134,99 +134,113 @@
       <!-- Navbar & Hero End -->
 
       <!-- Contact Start -->
-      <div class="container-xxl py-5" id="contact">
-        <div class="container py-5 px-lg-5">
-          <div class="wow fadeInUp" data-wow-delay="0.1s">
-            <h5 class="text-primary-gradient fw-medium text-center">
-                Register
-            </h5>
-            <h1 class="mb-5 text-center">申し込みフォーム</h1>
-            <div class="border-1">
-              <form class="border-1" id="sendMail" method="post">
-                <div class="mb-3">
-                  <label for="nameRestaurant" class="form-label text-dark fw-bold"
-                    >Name Restaurant</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nameRestaurant"
-                    placeholder="Enter your nameRestaurant"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="phoneNumber" class="form-label text-dark fw-bold"
-                    >Phone Number</label
-                  >
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="phoneNumber"
-                    placeholder="Enter your phone"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label text-dark fw-bold"
-                    >Email</label
-                  >
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="Enter the email"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="addressRestaurant" class="form-label text-dark fw-bold"
-                    >Address Restaurant</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="addressRestaurant"
-                    placeholder="Enter your address restaurant"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="numberOfTables" class="form-label text-dark fw-bold"
-                    >Number of tables</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="numberOfTables"
-                    placeholder="Enter your Number of tables "
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="massage" class="form-label text-dark fw-bold"
-                    >Message</label
-                  >
-                  <input
-                    type="massage"
-                    class="form-control"
-                    id="massage"
-                    placeholder="Enter your message"
-                    required
-                  />
-                </div>
-                <button
-                  type="submit"
-                  class="btn btn-primary-gradient text-white"
-                  value="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+      <section class="ftco-section">
+		<div class="container-contact">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">申し込みフォーム</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-10">
+					<div class="wrapper">
+						<div class="row no-gutters">
+							<div class="col-md-6">
+								<div class="contact-wrap w-100 p-lg-5 p-4">
+									<h3 class="mb-4">私達にメッセージを送ります</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+				      		
+									<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="text" class="form-control-contact" name="nameRestaurant" id="nameRestaurant" placeholder="店舗名" required>
+												</div>
+											</div>
+											<div class="col-md-12"> 
+												<div class="form-group">
+													<input type="email" class="form-control-contact" name="email" id="email" placeholder="登録メールアドレス" required>
+                                                   
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="text" class="form-control-contact" name="phoneNumber" id="phoneNumber" placeholder="店舗電話番号
+                          " required>
+												</div>
+											</div>
+                                            <div class="col-md-12">
+												<div class="form-group">
+													<input type="text" class="form-control-contact" name="addressRestaurant" id="addressRestaurant" placeholder="店舗住所" required>
+												</div>
+											</div>
+                                            <div class="col-md-12">
+												<div class="form-group">
+													<input type="text" class="form-control-contact" name="numberOfTables" id="numberOfTables" placeholder="テーブル数
+                                                    " required>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<textarea name="message" class="form-control-contact" id="message" cols="30" rows="6" placeholder="他の質問かお希望がありますか？"></textarea>
+												</div>
+											</div>
+                                            
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="メッセージを送ります" class="btn btn-primary">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-md-6 d-flex align-items-stretch">
+								<div class="info-wrap w-100 p-lg-5 p-4 img">
+									<h3>問い合わせ</h3>
+									<p class="mb-4">ご提案やチャットだけでもお待ちしております</p>
+				        	<div class="dbox w-100 d-flex align-items-start">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-map-marker"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Address:</span> 〒132-0035
+                                    東京都江戸川区平井３丁目１２－３マヤマンション３０３号</p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-phone"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Phone:</span> <a href="tel://1234567920">050-6867-9509</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-paper-plane"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Email:</span> <a href="mailto:info@yoursite.com">contact.atpos@gmail.com</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-globe"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Website</span> <a href="#">atpos.net</a></p>
+					          </div>
+				          </div>
+			          </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
       <!-- Contact End -->
 
       <!-- Footer Start -->
@@ -245,15 +259,15 @@
               <p><i class="fa fa-phone-alt me-3"></i>050-6867-9509</p>
               <p><i class="fa fa-envelope me-3"></i>contact.atpos@gmail.com</p>
               <div class="d-flex pt-2">
-                <a class="btn btn-outline-light btn-social" href="#"
+                <a class="btn btn-primary-gradient btn-social" href="#"
                   ><i class="fab fa-twitter"></i
                 ></a>
                 <a
-                  class="btn btn-outline-light btn-social"
+                  class="btn btn-primary-gradient btn-social"
                   href="https://www.facebook.com/atpos.net"
                   ><i class="fab fa-facebook-f"></i
                 ></a>
-                <a class="btn btn-outline-light btn-social" href="#"
+                <a class="btn btn-primary-gradient btn-social" href="#"
                   ><i class="fab fa-instagram"></i
                 ></a>
               </div>
@@ -311,12 +325,12 @@
                   ><b>AT-JSC</b></a
                 >
               </div>
-              <div class="col-md-6 text-center text-md-end">
+              <div class=" text-dark col-md-6 text-center text-md-end">
                 <div class="footer-menu">
-                  <a href="index.html">ホーム</a>
-                  <a href="">Cookies</a>
-                  <a href="">Help</a>
-                  <a href="Q&A.html">FQAs</a>
+                  <a class="text-dark" href="index.html">ホーム</a>
+                  <a class="text-dark" href="">Cookies</a>
+                  <a class="text-dark" href="">Help</a>
+                  <a class="text-dark" href="Q&A.html">FQAs</a>
                 </div>
               </div>
             </div>
@@ -346,15 +360,16 @@
     <!-- Send Email-->
 
     <script type="text/javascript">
+    
       function reset() {
-        document.getElementById("sendMail").reset();
+        document.getElementById("contactForm").reset();
       }
-      document.getElementById("sendMail").onsubmit = function (event) {
+      document.getElementById("contactForm").onsubmit = function (event) {
         event.preventDefault(); // Ngăn form tự động gửi
         // Lấy thông tin từ form
         const to_name_restaurant = document.getElementById("nameRestaurant").value;
         const to_email = document.getElementById("email").value;
-        const to_message = document.getElementById("massage").value;
+        const to_message = document.getElementById("message").value;
         const to_phone = document.getElementById("phoneNumber").value;
         const to_address_restaurant = document.getElementById("addressRestaurant").value;
         const to_number_tables = document.getElementById("numberOfTables").value;
