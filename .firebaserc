@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "default": "atpos-web"
+  },
+  "targets": {},
+  "etags": {
+    "atpos-web": {
+      "extensionInstances": {
+        "firestore-send-email": "ce6b64545eeee044ebbdc5f1fdef8db629b36a1f91b3e6e5760842bcea7a547a"
+      }
+    }
+  }
+}
