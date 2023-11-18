@@ -12,7 +12,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
-
 function submitForm() {
     const nameRestaurant = document.getElementById("nameRestaurant").value;
     const email = document.getElementById("email").value;
@@ -21,13 +20,20 @@ function submitForm() {
     const phoneNumber = document.getElementById("phoneNumber").value;
 
     // Lưu dữ liệu vào Firebase Realtime Database
-    database.ref('contacts').push({
+    const data = {
         nameRestaurant: nameRestaurant,
         email: email,
         message: message,
         addressRestaurant: addressRestaurant,
         phoneNumber: phoneNumber
-    });
+    };
 
-    alert('Form submitted successfully!');
+    // Sử dụng phương thức set để ghi đè dữ liệu tại đường dẫn 'contacts'
+    database.ref('contacts').set(data)
+        .then(() => {
+            console.log('Form submitted successfully!');
+        })
+        .catch((error) => {
+            console.error('Error submitting form:', error);
+        });
 }
